@@ -179,6 +179,25 @@ Possiamo concludere dicendo brevemente che l'Abstract Factory ci permette di  ut
 
 ## Builder Pattern
 
+Il Builder Pattern separa la costruzione di un oggetto complesso dalla sua rappresentazione, in modo che il processo di costruzione stesso possa creare diverse rappresentazioni.
+
+L'algoritmo per la creazione di un oggetto complesso è indipendente dalle varie parti che costituiscono l'oggetto e da come vengono assemblate.
+
+Ciò ha l'effetto immediato di rendere più semplice la classe, permettendo a una classe builder separata di focalizzarsi sulla corretta costruzione di un'istanza e lasciando che la classe originale si concentri sul funzionamento degli oggetti. 
+
+Questo è particolarmente utile quando volete assicurarvi che un oggetto sia valido prima di istanziarlo, e non volete che la logica di controllo appaia nei costruttori degli oggetti. Un builder permette anche di costruire un oggetto passo-passo.
+
+Analizziamo la stuttura di questo pattern:
+
++   Builder(PizzaBuilder): specifica l'interfaccia astratta che crea le parti dell'oggetto Prodotto.
++   ConcreteBuilder(Margherita): costruisce e assembla le parti del prodotto implementando l'interfaccia Builder; definisce e tiene traccia della rappresentazione che crea.
++   Director(Cuoco): costruisce un oggetto utilizzando l'interfaccia Builder.
++   Product(Pizza): rappresenta l'oggetto complesso e include le classi che definiscono le parti che lo compongono, includendo le interfacce per assemblare le parti nel risultato finale.
+
+![Builder](https://upload.wikimedia.org/wikipedia/it/1/14/Builder.png)
+
+Passiamo ora ad un esempio con relativa spiegazione step-by-step. Per il codice completo andate qui [builder pizza]
+
 ## Design Patterns Strutturali
 
 ## Design Patterns Comportamentali
@@ -193,6 +212,8 @@ Possiamo concludere dicendo brevemente che l'Abstract Factory ci permette di  ut
 
 [1] - [2] - [4] - [5] - [6] Abstract Factory
 
+[1] - [2] - [7] Builder Pattern
+
 [Marco Ferraioli]:https://marcoferraioli.com/
 [1]:http://www.amazon.com/Python-Practice-Concurrency-Libraries-Developers/dp/0321905636
 [2]:https://it.wikipedia.org/wiki/Design_pattern
@@ -202,3 +223,5 @@ Possiamo concludere dicendo brevemente che l'Abstract Factory ci permette di  ut
 [6]:http://www.python-it.org/forum/index.php?topic=1910.0
 [abstract person]:https://github.com/paranoiasystem/Patterns/blob/master/codice/abstract/person/Person.py
 [Duck Typing]:https://it.wikipedia.org/wiki/Duck_typing
+[7]:https://it.wikipedia.org/wiki/Builder
+[builder pizza]:https://github.com/paranoiasystem/Patterns/blob/master/codice/abstract/builder/Pizza.py
