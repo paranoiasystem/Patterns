@@ -11,7 +11,7 @@ Indice
 
 [Introduzione](#introduzione)
 
-1 [Cosa Sono I Patterns](#cosa-sono-i-patterns):
+1 [Cosa Sono I Design Patterns](#cosa-sono-i-design-patterns):
 
 -	1.1 [Tipi di design patterns](#tipi-di-design-patterns)
 
@@ -46,19 +46,23 @@ Sono uno studente dell'Univesità degli studi di Salerno, frequento il corso di 
 
 Mi occupo di sviluppo Software ed anche di elettronica, in particolare dello sviluppo di progetti su Arduino.
 
+Il seguente libro nasce con l'intento di mettere assieme tutto lo studio da me fatto sui vari pattern durante il corso di TPA (Tecniche di Programmazione Avanzata).
+
+Tutti i pattern all'interno di questo libro saranno implementati in Python.
+
 Questo non voglio definirlo propriamente un libro, anche se ha tutta la struttura di un libro. È il mio primo lavoro di questo genere, più che lavoro lo definirei un mio primo esperimento nella stesura di un libro/guida.
 
-Ho deciso di rilasciare il libro ed il codice sotto licenza GNU, quindi sentitevi liberi di copiralo, modificarlo e creare nuove opere basato su esso, inoltre ricordate di citare la fonte.
+Ho deciso di rilasciare il libro ed il codice sotto licenza GNU, quindi sentitevi liberi di copiralo, modificarlo e creare nuove opere derivate, ricordate di citare la fonte.
 
-Inoltre vi ricordo che all'interno degli articoli non verrà riportato tutto il codice ma solo i pezzi più importanti, comunque linkero prima di ogni esempio il file a cui fare riferimento.
+Vi ricordo che all'interno degli articoli non verrà riportato tutto il codice ma solo i pezzi più importanti, comunque linkero prima di ogni esempio il file a cui fare riferimento.
 
-## Cosa Sono I Patterns
+## Cosa Sono I Design Patterns
 
 Un design pattern è un concetto che può essere definito "una soluzione progettuale generale ad un problema ricorrente". Si tratta di una descrizione o modello logico da applicare per la risoluzione di un problema che può presentarsi in diverse situazioni durante le fasi di progettazione e sviluppo del software, ancor prima della definizione dell'algoritmo risolutivo della parte computazionale.
 
 ## Tipi di design patterns
 
-I design pattern possono essere classificati con diversi criteri, i più comuni dei quali sono quelli che evidenziano il tipo di problema che si cerca di risolvere. 
+I design pattern possono essere classificati con diversi criteri, i più comuni sono quelli che evidenziano il tipo di problema che si cerca di risolvere. 
 
 Il tipo di problema può essere legato ad uno specifico dominio progettuale oppure, più comunemente, al problema progettuale in senso più ampio (nell'ingegneria del software, ad esempio, si può parlare di creazione, comportamento, navigazione di oggetti o strutture dati).
 
@@ -79,22 +83,22 @@ L'Abstract factory è uno dei fondamentali design pattern creazionali della prog
 
 Questo pattern è utile quando vogliamo creare oggetti complessi che sono composti da altri oggetti e dove gli oggetti composti sono tutti di una particolare famiglia.
 
-Per esempio, in un sistema di GUI dove potremmo avere un Abstract Factory che ha tre sottoclassi che hanno gli stessi metodi per creare un bottone o una label ma lo fanno in modi diversi.
+Per esempio, in un sistema di GUI dove potremmo avere un Abstract Factory che ha tre sottoclassi (Linux,Windows,OSX) che hanno gli stessi metodi per creare un bottone o una label ma lo fanno in modi diversi.
 
-Ora vedremo subito un esempio di questo pattern, andremo a realizzare.
+Ora vedremo subito un esempio di questo pattern.
 
 Questo pattern ha la seguente struttura:
 
-(Da aggiustare)
+
 +	AbstractFactory(Person): interfaccia che espone le operazioni realizzate dai oggetti concreti
 +	ConcreteFactory(Italian/English): implementazione delle operazioni indicate nell'AbstractFactory
-+	AbstractPerson: interfaccia di esposizione delle operazioni delle persone
-+	ConcretePerson: implementazione delle operazioni delle persone
++	AbstractSaluta(InterfaceGetSaluto): interfaccia di esposizione dell'operazione di saluto
++	ConcreteSaluta(ItalianGetSaluto/EnglishGetSaluto): implementazione dell'operazione di saluto
 +	Main: invocazione 
 
 Per visualizzare il codice completo andate qui: [abstract person]
 
-Per prima cosa creaiamo l'interfaccia Person 
+Per prima cosa creaiamo l'AbstractFactory(Person) 
 
 ```python
 class InterfacePerson(object):
@@ -105,7 +109,7 @@ class InterfacePerson(object):
         pass
 ```
 
-Una volta definita l'interfaccia persona passiamo a definire le classi che conterrano l'implementazione dei metodi definiti nell'interfaccia.
+Una volta definita l'interfaccia Person passiamo a definire le classi che conterrano l'implementazione dei metodi definiti nell'interfaccia, ovvero il ConcreteFactory(Italian).
 
 (Di seguito per comodità vedremo solo la classe Italian e tutto ciò che è correleato ad essa, per il resto del codice andare qui: [abstract person] ) 
 
@@ -119,11 +123,9 @@ class Italian(InterfacePerson):
         pass
 ```
 
-É bene notare che all'interno di getSaluto avremmo potuto l'implementazione finale della nostra funzione.
+É bene notare che all'interno di getSaluto avremmo potuto scrivere direttamente l'implementazione finale della nostra funzione.
 
-In questo caso ho deciso di far ritornare l'instanza di un oggetto che si fa carico dell'implementazione.
-
-Per Prima cosa definiamo l'interfaccia comune:
+In questo caso ho deciso di far ritornare l'instanza di un oggetto che si fa carico dell'implementazione ovvero AbstractSaluta(InterfaceGetSaluto), vediamo la sua implementazione:
 
 ```python
 class InterfaceGetSaluto(object):
@@ -134,7 +136,7 @@ class InterfaceGetSaluto(object):
 		pass
 ```
 
-Ora andiamo a definire l' implementazione per la classe Italian
+Ora andiamo a definire l'implementazione per la classe che ci permette di salutare, ConcreteSaluta(ItalianGetSaluto):
 
 ```python
 class ItalianGetSaluto(InterfaceGetSaluto):
@@ -146,13 +148,12 @@ class ItalianGetSaluto(InterfaceGetSaluto):
 		pass
 ```
 
-Il Main:
+Ora passiamo al Main:
 
 ```python
 nation = "Italia"
 person = None
-    
-#Instanziamo l'oggetto di cui abbiamo bisogno in base ad un if
+
 if(nation == "Italia"):
     person = Italian()
 else:
@@ -164,13 +165,15 @@ saluto.Saluta()
 
 In output riceveremo: Ciao, Come va?
 
-É importante notare che utlizziamo gli stessi metodi per accedere ad oggetti di tipo differente, di seguito avremo una risposta diversa che dipende dalla loro implementazione.
+É importante notare che in questo caso sono il pattern Abstract Factory è stato usato due volte. La prima volta per definire l'esistenza di vari tipi di persona e la seconda per definire l'esistenza di vari tipi di modi si salutare.
+
+Possiamo concludere dicendo brevemente che l'Abstract Factory ci permette di  utilizzare gli stessi metodi per accedere ad oggetti di tipo differente, quindi avremo una risposta diversa che dipende dalla loro implementazione dei metodi della classe.
 
 ## Design Patterns Strutturali
 
 ## Design Patterns Comportamentali
 
-## Bibliografia
+## Bibliografia - Referenze
 
 [2] Cosa Sono I Patterns
 
