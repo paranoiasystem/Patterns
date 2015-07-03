@@ -178,6 +178,15 @@ In output riceveremo: Ciao, Come va?
 
 É importante notare che in questo caso sono il pattern Abstract Factory è stato usato due volte. La prima volta per definire l'esistenza di vari tipi di persona e la seconda per definire l'esistenza di vari tipi di modi si salutare.
 
+Ora analizziamo i suoi vantaggi:
+
++   isolamento delle classi concrete: il client non ha modo di instanziare direttamente le classi concrete, ma può creare le instanze delle classi semplicemente tramite le interfacce.
++   semplificazione della modifica delle relazioni: le relazioni tra le classi concrete possono essere facilmente modificate senza pregiudicare il client che, poichè non ha visibilità della struttura implementativa, non avrà nessuna ricaduta sulle modifiche effettuate.
+
+Ecco gli svantaggi:
+
++   difficoltà nell’aggiungere nuovi prodotti(metodi): la creazione di nuovi prodotti comporta delle modifiche in AbstractFactory e tutte le classi figlie e questa modifica non è indolore.
+
 Possiamo concludere dicendo brevemente che l'Abstract Factory ci permette di  utilizzare gli stessi metodi per accedere ad oggetti di tipo differente, quindi avremo una risposta diversa che dipende dalla loro implementazione dei metodi della classe.
 
 ## Builder Pattern
@@ -215,7 +224,7 @@ Passiamo ora ad un esempio con relativa spiegazione step-by-step. Per il codice 
 
 [1] - [2] - [4] - [5] - [6] Abstract Factory
 
-[1] - [2] - [7] Builder Pattern
+[1] - [2] - [7] - [8] - [9] - [10] Builder Pattern
 
 [Marco Ferraioli]:https://marcoferraioli.com/
 [1]:http://www.amazon.com/Python-Practice-Concurrency-Libraries-Developers/dp/0321905636
@@ -227,4 +236,7 @@ Passiamo ora ad un esempio con relativa spiegazione step-by-step. Per il codice 
 [abstract person]:https://github.com/paranoiasystem/Patterns/blob/master/codice/abstract/person/Person.py
 [Duck Typing]:https://it.wikipedia.org/wiki/Duck_typing
 [7]:https://it.wikipedia.org/wiki/Builder
+[8]:https://dellabate.wordpress.com/2011/01/10/gof-patterns-builder/
+[9]:http://www.cosenonjaviste.it/dai-costruttori-al-builder-pattern-in-java/
+[10]:http://www.helldragon.eu/marcello/galli_python/14-Classi.html
 [builder pizza]:https://github.com/paranoiasystem/Patterns/blob/master/codice/builder/pizza/Pizza.py
