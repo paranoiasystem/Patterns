@@ -328,7 +328,7 @@ Possiamo concludere dicendo che questo pattern consente di utilizzare un Client 
 
 ## Factory Method Pattern
 
-da scrivere
+coming soon
 
 ## Prototype Pattern
 
