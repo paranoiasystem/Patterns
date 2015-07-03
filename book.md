@@ -245,7 +245,7 @@ In programmazione a oggetti, una metaclasse è una classe le cui istanze sono a 
 
 Questo ci permette di creare una specie di interfaccia, ovvero ci fa creare dei metodi rendendoli astratti così da richiedre la loro implementazione nelle classi che la estendono.
 
-Nell'[Abstract Factory] ho già spiegato il perchè non esistono le interfacce.
+Nell' [Abstract Factory] ho già spiegato il perchè non esistono le interfacce.
 
 Continuiamo a vedere il codice, ora vedremo il Builder:
 
