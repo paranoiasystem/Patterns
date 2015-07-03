@@ -19,22 +19,25 @@ Indice
 [Introduzione]
 
 [Design Patterns Creazionali] :
-  -a
-  -s
-  -d
-  -f
 
-[Design Patterns Stutturali] :
-  -a
-  -s
-  -d
-  -f
+- a
+- b
+- c
+- d
+
+[Design Patterns Strutturali] :
+
+- a
+- b
+- c
+- d
 
 [Design Patterns Comportamentali] :
-  -a
-  -s
-  -d
-  -f
+
+- a
+- b
+- c
+- d
 
 
 [Marco Ferraioli]:https://marcoferraioli.com/
