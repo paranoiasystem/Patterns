@@ -13,7 +13,7 @@ Indice
 
 1 [Cosa Sono I Patterns](#cosa-sono-i-patterns):
 
--	1.1 [Tipi di design patterns](tipi-di-design-patterns)
+-	1.1 [Tipi di design patterns](#tipi-di-design-patterns)
 
 2 [Design Patterns Creazionali](#design-patterns-creazionali) :
 
@@ -81,7 +81,7 @@ In parole povere: I pattern creazionali nascondono i costruttori delle classi e 
 
 [2] Tipi di design patterns
 
-[2] [3] Design Patterns Creazionali
+[2] - [3] Design Patterns Creazionali
 
 [Marco Ferraioli]:https://marcoferraioli.com/
 [1]:http://www.amazon.com/Python-Practice-Concurrency-Libraries-Developers/dp/0321905636
