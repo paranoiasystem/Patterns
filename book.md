@@ -8,15 +8,10 @@ Questo libro è decicato alla comunità OpenSource
 
 ----------
 
-Bibliografia
--------------
-
-Python in Practice by Mark Summerfield [1]
-
 Indice
 -------------
 
-[Introduzione]
+[Introduzione](#Introduzione)
 
 [Design Patterns Creazionali] :
 
@@ -39,10 +34,23 @@ Indice
 - c
 - d
 
+[Bibliografia](#Bibliografia)
+
+## Introduzione
+-------------
+
+Salve, sono [Marco Ferraioli]. Sono.....
+
+Questo non voglio definirlo propriamente un libro, anche se ha tutta la struttura di un libro. È il mio primo lavoro di questo genere, più che lavoro lo definirei un mio primo esperimento nella stesura di un libro/guida.
+
+Ho deciso di rilasciare il libro ed il codice sotto licenza GNU, quindi sentitevi liberi di copiralo, modificarlo e creare nuove opere basato su esso, inoltre ricordate di citare la fonte.
+
+
+## Bibliografia
+-------------
+
+Python in Practice by Mark Summerfield [1]
+
 
 [Marco Ferraioli]:https://marcoferraioli.com/
 [1]:http://www.amazon.com/Python-Practice-Concurrency-Libraries-Developers/dp/0321905636
-[Introduzione]:#
-[Design Patterns Creazionali]:#
-[Design Patterns Strutturali]:#
-[Design Patterns Comportamentali]:#
