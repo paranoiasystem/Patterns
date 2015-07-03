@@ -17,8 +17,8 @@ Indice
 
 2 [Design Patterns Creazionali](#design-patterns-creazionali) :
 
--	[Abstract Factory](#abstract-factory)
--	a
+-	2.1 [Abstract Factory](#abstract-factory)
+-	2.2 [Builder Pattern](#builder-pattern)
 -	a
 -	a
 
@@ -96,6 +96,14 @@ Questo pattern ha la seguente struttura:
 +	ConcreteSaluta(ItalianGetSaluto/EnglishGetSaluto): implementazione dell'operazione di saluto
 +	Main: invocazione 
 
+Vorrei fare una piccola nota: In Python non esistono le interfacce, quindi per implementare il codice useremo delle normali classi, questo non è da ritenersi un errore.
+
+Python è un linguaggio dinamico, che usa fortemente il [Duck Typing].
+
+Il concetto di interfaccia in python è basato sui metodi e non sull'ereditarietà. Ad esempio qualsiasi classe che abbia dei metodi come open(), read(), write(), eccetera è assimilabile ad un file,  quindi può essere usata come sostituto di un file. Un po' come quando guidi, non ti interessa sapere come funziona il motore o il tipo di automobile. Ma sai che se schiacci un pedale acceleri, un altro freni, con il volante si sterza ed eccetera, quindi che tu stia guidando un tir, un motocarro o una ferrari l'interfaccia è la stessa!
+
+Nel codice per distinguere le classi dalle interfacce scriveremo Interface prima del proprio nome
+
 Per visualizzare il codice completo andate qui: [abstract person]
 
 Per prima cosa creaiamo l'AbstractFactory(Person) 
@@ -169,6 +177,8 @@ In output riceveremo: Ciao, Come va?
 
 Possiamo concludere dicendo brevemente che l'Abstract Factory ci permette di  utilizzare gli stessi metodi per accedere ad oggetti di tipo differente, quindi avremo una risposta diversa che dipende dalla loro implementazione dei metodi della classe.
 
+## Builder Pattern
+
 ## Design Patterns Strutturali
 
 ## Design Patterns Comportamentali
@@ -181,7 +191,7 @@ Possiamo concludere dicendo brevemente che l'Abstract Factory ci permette di  ut
 
 [2] - [3] Design Patterns Creazionali
 
-[1] - [2] - [4] - [5] Abstract Factory
+[1] - [2] - [4] - [5] - [6] Abstract Factory
 
 [Marco Ferraioli]:https://marcoferraioli.com/
 [1]:http://www.amazon.com/Python-Practice-Concurrency-Libraries-Developers/dp/0321905636
@@ -189,4 +199,6 @@ Possiamo concludere dicendo brevemente che l'Abstract Factory ci permette di  ut
 [3]:http://www.federica.unina.it/ingegneria/programmazione-2/design-pattern-creazionali-esempi/
 [4]:https://it.wikipedia.org/wiki/Abstract_factory
 [5]:https://dellabate.wordpress.com/2011/01/04/gof-pattern-abstract-factory/
+[6]:http://www.python-it.org/forum/index.php?topic=1910.0
 [abstract person]:https://github.com/paranoiasystem/Patterns/blob/master/codice/abstract/person/Person.py
+[Duck Typing]:https://it.wikipedia.org/wiki/Duck_typing

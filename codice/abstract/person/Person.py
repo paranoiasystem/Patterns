@@ -1,12 +1,7 @@
-﻿#Person dovreebbe essere un interfaccia, ma useremo una classe perchè in python non esistono le interfacce.
-#Python è un linguaggio dinamico.
-#Il concetto di interfaccia in python è basato sui metodi e non sull'ereditarietà.
-#Per distinguere le classi dalle interfacce scriveremo Interface prima del proprio nome
-
-class InterfacePerson(object):
+﻿class InterfacePerson(object):
     def __init__(self):
         super().__init__()
-    
+        
     def getSaluto(self):
         pass
 
@@ -30,39 +25,39 @@ class English(InterfacePerson):
     
     
 class InterfaceGetSaluto(object):
-	def __init__(self):
-		super().__init__()
-		
-	def Saluta(self):
-		pass
+    def __init__(self):
+        super().__init__()
+        
+    def Saluta(self):
+        pass
 
 class ItalianGetSaluto(InterfaceGetSaluto):
-	def __init__(self):
-		super().__init__()
-		
-	def Saluta(self):
-		print("Ciao, Come va?")
-		pass
+    def __init__(self):
+        super().__init__()
+        
+    def Saluta(self):
+        print("Ciao, Come va?")
+        pass
 
 class EnglishGetSaluto(InterfaceGetSaluto):
-	def __init__(self):
-		super().__init__()
-		
-	def Saluta(self):
-		print("Hello, How are you?")
-		pass
+    def __init__(self):
+        super().__init__()
+
+    def Saluta(self):
+        print("Hello, How are you?")
+        pass
 
 def main():
-    #nation = "Italia"
-    nation = "USA"
+    nation = "Italia"
+    #nation = "USA"
     person = None
-    
-    #Instanziamo l'oggetto di cui abbiamo bisogno in base ad un if
+
     if(nation == "Italia"):
         person = Italian()
     else:
         person = English()
- 
+        
+    saluto = person.getSaluto()
     saluto.Saluta()
 
 if __name__ == '__main__':
