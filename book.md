@@ -54,8 +54,7 @@ Ho deciso di rilasciare il libro ed il codice sotto licenza GNU, quindi sentitev
 
 Un design pattern è un concetto che può essere definito "una soluzione progettuale generale ad un problema ricorrente". Si tratta di una descrizione o modello logico da applicare per la risoluzione di un problema che può presentarsi in diverse situazioni durante le fasi di progettazione e sviluppo del software, ancor prima della definizione dell'algoritmo risolutivo della parte computazionale.
 
-Tipi di design patterns
--------------
+## Tipi di design patterns
 
 I design pattern possono essere classificati con diversi criteri, i più comuni dei quali sono quelli che evidenziano il tipo di problema che si cerca di risolvere. 
 
