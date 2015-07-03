@@ -6,32 +6,30 @@ Scritto da: [Marco Ferraioli].
 
 Questo libro è decicato alla comunità OpenSource
 
-----------
-
 Indice
 -------------
 
 [Introduzione](#introduzione)
 
-[Cosa Sono I Patterns](#cosa sono i patterns):
+1 [Cosa Sono I Patterns](#cosa-sono-i-patterns):
 
--	[Tipi di design patters](tipi design patterns)
+-	1.1 [Tipi di design patters](tipi-di-design-patterns)
 
-[Design Patterns Creazionali](#design patterns creazionali) :
-
--	a
--	a
--	a
--	a
-
-[Design Patterns Strutturali] :
+2 [Design Patterns Creazionali](#design-patterns-creazionali) :
 
 -	a
 -	a
 -	a
 -	a
 
-[Design Patterns Comportamentali] :
+3 [Design Patterns Strutturali](#design-patterns-strutturali) :
+
+-	a
+-	a
+-	a
+-	a
+
+4 [Design Patterns Comportamentali](#design-patterns-comportamentali) :
 
 -	a
 -	a
@@ -56,7 +54,7 @@ Ho deciso di rilasciare il libro ed il codice sotto licenza GNU, quindi sentitev
 
 Un design pattern è un concetto che può essere definito "una soluzione progettuale generale ad un problema ricorrente". Si tratta di una descrizione o modello logico da applicare per la risoluzione di un problema che può presentarsi in diverse situazioni durante le fasi di progettazione e sviluppo del software, ancor prima della definizione dell'algoritmo risolutivo della parte computazionale.
 
-Tipi design patterns
+Tipi di design patterns
 -------------
 
 I design pattern possono essere classificati con diversi criteri, i più comuni dei quali sono quelli che evidenziano il tipo di problema che si cerca di risolvere. 
@@ -72,10 +70,18 @@ I design patterns creazionali astraggono il processo di istanziazione, essi cons
 
 In parole povere: I pattern creazionali nascondono i costruttori delle classi e mettono dei metodi al loro posto creando un'interfaccia. In questo modo si possono utilizzare oggetti senza sapere come sono implementati.
 
+## Design Patterns Strutturali
+
+## Design Patterns Comportamentali
+
 ## Bibliografia
 
-Python in Practice by Mark Summerfield [1]
-
+[1] Python in Practice by Mark Summerfield
+[2] Cosa Sono I Patterns
+[2] Tipi di design patterns
+[2] [3] Design Patterns Creazionali
 
 [Marco Ferraioli]:https://marcoferraioli.com/
 [1]:http://www.amazon.com/Python-Practice-Concurrency-Libraries-Developers/dp/0321905636
+[2]:https://it.wikipedia.org/wiki/Design_pattern
+[3]:http://www.federica.unina.it/ingegneria/programmazione-2/design-pattern-creazionali-esempi/
