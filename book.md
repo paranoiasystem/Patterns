@@ -96,6 +96,9 @@ Questo pattern ha la seguente struttura:
 +	ConcreteSaluta(ItalianGetSaluto/EnglishGetSaluto): implementazione dell'operazione di saluto
 +	Main: invocazione 
 
+![Abstact UML](https://upload.wikimedia.org/wikipedia/commons/9/9d/Abstract_factory_UML.svg)
+
+
 Vorrei fare una piccola nota: In Python non esistono le interfacce, quindi per implementare il codice useremo delle normali classi, questo non è da ritenersi un errore.
 
 Python è un linguaggio dinamico, che usa fortemente il [Duck Typing].
@@ -194,7 +197,7 @@ Analizziamo la stuttura di questo pattern:
 +   Director(Cuoco): costruisce un oggetto utilizzando l'interfaccia Builder.
 +   Product(Pizza): rappresenta l'oggetto complesso e include le classi che definiscono le parti che lo compongono, includendo le interfacce per assemblare le parti nel risultato finale.
 
-![Builder](https://upload.wikimedia.org/wikipedia/it/1/14/Builder.png)
+![Builder UML](https://upload.wikimedia.org/wikipedia/it/1/14/Builder.png)
 
 Passiamo ora ad un esempio con relativa spiegazione step-by-step. Per il codice completo andate qui [builder pizza]
 
