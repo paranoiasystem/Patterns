@@ -11,7 +11,7 @@ Questo libro è decicato alla comunità OpenSource
 Indice
 -------------
 
-[Introduzione](#Introduzione)
+[Introduzione](#introduzione)
 
 [Design Patterns Creazionali] :
 
@@ -34,10 +34,9 @@ Indice
 - c
 - d
 
-[Bibliografia](#Bibliografia)
+[Bibliografia](#bibliografia)
 
 ## Introduzione
--------------
 
 Salve, sono [Marco Ferraioli]. Sono.....
 
@@ -47,7 +46,6 @@ Ho deciso di rilasciare il libro ed il codice sotto licenza GNU, quindi sentitev
 
 
 ## Bibliografia
--------------
 
 Python in Practice by Mark Summerfield [1]
 
