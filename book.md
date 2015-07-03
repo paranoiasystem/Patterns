@@ -19,22 +19,10 @@ Indice
 
 -	2.1 [Abstract Factory](#abstract-factory)
 -	2.2 [Builder Pattern](#builder-pattern)
--	a
--	a
 
 3 [Design Patterns Strutturali](#design-patterns-strutturali) :
 
--	a
--	a
--	a
--	a
-
 4 [Design Patterns Comportamentali](#design-patterns-comportamentali) :
-
--	a
--	a
--	a
--	a
 
 [Bibliografia - Referenze](#bibliografia---referenze)
 
@@ -245,7 +233,7 @@ In programmazione a oggetti, una metaclasse è una classe le cui istanze sono a 
 
 Questo ci permette di creare una specie di interfaccia, ovvero ci fa creare dei metodi rendendoli astratti così da richiedre la loro implementazione nelle classi che la estendono.
 
-Nell' [Abstract Factory] ho già spiegato il perchè non esistono le interfacce.
+Nell'[Abstract Factory](#abstract-factory) ho già spiegato il perchè non esistono le interfacce.
 
 Continuiamo a vedere il codice, ora vedremo il Builder:
 
