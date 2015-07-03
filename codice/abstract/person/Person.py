@@ -62,11 +62,7 @@ def main():
         person = Italian()
     else:
         person = English()
-        
-    #utliziamo gli stessi metodi per accedere ad oggetti di tipo differente
-    #in base al tipo d'oggetto instanziato avremo una risposta diversa
-    #che dipende dall'implementazione
-    saluto = person.getSaluto()
+ 
     saluto.Saluta()
 
 if __name__ == '__main__':

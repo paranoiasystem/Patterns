@@ -85,17 +85,86 @@ Ora vedremo subito un esempio di questo pattern, andremo a realizzare.
 
 Questo pattern ha la seguente struttura:
 
+(Da aggiustare)
 +	AbstractFactory(Person): interfaccia che espone le operazioni realizzate dai oggetti concreti
-+	ConcreteFactory(Italian/English): implementazione delle operazioni indicate nell'AbstractFactory per la creazione degli oggetti
++	ConcreteFactory(Italian/English): implementazione delle operazioni indicate nell'AbstractFactory
 +	AbstractPerson: interfaccia di esposizione delle operazioni delle persone
 +	ConcretePerson: implementazione delle operazioni delle persone
 +	Main: invocazione 
 
 Per visualizzare il codice completo andate qui: [abstract person]
 
-```python
+Per prima cosa creaiamo l'interfaccia Person 
 
+```python
+class InterfacePerson(object):
+    def __init__(self):
+        super().__init__()
+    
+    def getSaluto(self):
+        pass
 ```
+
+Una volta definita l'interfaccia persona passiamo a definire le classi che conterrano l'implementazione dei metodi definiti nell'interfaccia.
+
+(Di seguito per comodità vedremo solo la classe Italian e tutto ciò che è correleato ad essa, per il resto del codice andare qui: [abstract person] ) 
+
+```python
+class Italian(InterfacePerson):
+    def __init__(self):
+        super().__init__()
+        
+    def getSaluto(self):
+        return ItalianGetSaluto()
+        pass
+```
+
+É bene notare che all'interno di getSaluto avremmo potuto l'implementazione finale della nostra funzione.
+
+In questo caso ho deciso di far ritornare l'instanza di un oggetto che si fa carico dell'implementazione.
+
+Per Prima cosa definiamo l'interfaccia comune:
+
+```python
+class InterfaceGetSaluto(object):
+	def __init__(self):
+		super().__init__()
+		
+	def Saluta(self):
+		pass
+```
+
+Ora andiamo a definire l' implementazione per la classe Italian
+
+```python
+class ItalianGetSaluto(InterfaceGetSaluto):
+	def __init__(self):
+		super().__init__()
+		
+	def Saluta(self):
+		print("Ciao, Come va?")
+		pass
+```
+
+Il Main:
+
+```python
+nation = "Italia"
+person = None
+    
+#Instanziamo l'oggetto di cui abbiamo bisogno in base ad un if
+if(nation == "Italia"):
+    person = Italian()
+else:
+    person = English()
+
+saluto = person.getSaluto()
+saluto.Saluta()
+```
+
+In output riceveremo: Ciao, Come va?
+
+É importante notare che utlizziamo gli stessi metodi per accedere ad oggetti di tipo differente, di seguito avremo una risposta diversa che dipende dalla loro implementazione.
 
 ## Design Patterns Strutturali
 
@@ -117,4 +186,4 @@ Per visualizzare il codice completo andate qui: [abstract person]
 [3]:http://www.federica.unina.it/ingegneria/programmazione-2/design-pattern-creazionali-esempi/
 [4]:https://it.wikipedia.org/wiki/Abstract_factory
 [5]:https://dellabate.wordpress.com/2011/01/04/gof-pattern-abstract-factory/
-[abstract person]:#
+[abstract person]:https://github.com/paranoiasystem/Patterns/blob/master/codice/abstract/person/Person.py
