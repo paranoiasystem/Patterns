@@ -15,14 +15,14 @@ Indice
 
 -	1.1 [Tipi di design patterns](#tipi-di-design-patterns)
 
-2 [Design Patterns Creazionali](#design-patterns-creazionali) :
+2 [Design Patterns Creazionali](#design-patterns-creazionali):
 
 -	2.1 [Abstract Factory](#abstract-factory)
 -	2.2 [Builder Pattern](#builder-pattern)
 
-3 [Design Patterns Strutturali](#design-patterns-strutturali) :
+3 [Design Patterns Strutturali](#design-patterns-strutturali):
 
-4 [Design Patterns Comportamentali](#design-patterns-comportamentali) :
+4 [Design Patterns Comportamentali](#design-patterns-comportamentali):
 
 [Bibliografia - Referenze](#bibliografia---referenze)
 
