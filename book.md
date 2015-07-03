@@ -224,4 +224,4 @@ Passiamo ora ad un esempio con relativa spiegazione step-by-step. Per il codice 
 [abstract person]:https://github.com/paranoiasystem/Patterns/blob/master/codice/abstract/person/Person.py
 [Duck Typing]:https://it.wikipedia.org/wiki/Duck_typing
 [7]:https://it.wikipedia.org/wiki/Builder
-[builder pizza]:https://github.com/paranoiasystem/Patterns/blob/master/codice/pizza/builder/Pizza.py
+[builder pizza]:https://github.com/paranoiasystem/Patterns/blob/master/codice/builder/pizza/Pizza.py
