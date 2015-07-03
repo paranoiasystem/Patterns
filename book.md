@@ -36,7 +36,7 @@ Indice
 -	a
 -	a
 
-[Bibliografia](#bibliografia)
+[Bibliografia - Referenze](#bibliografia---referenze)
 
 ## Introduzione
 
@@ -208,7 +208,132 @@ Analizziamo la stuttura di questo pattern:
 
 ![Builder UML](https://upload.wikimedia.org/wikipedia/it/1/14/Builder.png)
 
-Passiamo ora ad un esempio con relativa spiegazione step-by-step. Per il codice completo andate qui [builder pizza]
+Passiamo ora ad un esempio con relativa spiegazione step-by-step. Per il codice completo andate qui [builder pizza].
+
+Iniziamo a definire il nostro prodotto, ovvero la pizza:
+
+```python
+from abc import ABCMeta, abstractmethod
+
+class Pizza(object):
+    __impasto = None
+    __salsa = None
+    __condimento = None
+
+    def __init__(self):
+        super().__init__()
+
+    def setImpasto(self, impasto):
+        self.__impasto = impasto
+
+    def setSalsa(self, salsa):
+        self.__salsa = salsa
+
+    def setCondimento(self, condimento):
+        self.__condimento = condimento
+```
+
+Prima di continuare voglio analizzare con voi la seguente riga:
+
+```python
+from abc import ABCMeta, abstractmethod
+```
+
+Importiamo ABCMeta ed abstractmethod che ci consentiranno di creare dei metodi astratti tramite l'uso della metaclasse ABCMeta.
+
+In programmazione a oggetti, una metaclasse è una classe le cui istanze sono a loro volta classi. Questo concetto è strettamente legato al concetto di riflessione (reflection), che si applica a quegli strumenti concettuali che permettono di rappresentare, all'interno di un programma, informazioni sulle parti costituenti del programma stesso (tipicamente classi e oggetti).
+
+Questo ci permette di creare una specie di interfaccia, ovvero ci fa creare dei metodi rendendoli astratti così da richiedre la loro implementazione nelle classi che la estendono.
+
+Nell'[Abstract Factory] ho già spiegato il perchè non esistono le interfacce.
+
+Continuiamo a vedere il codice, ora vedremo il Builder:
+
+```python
+class PizzaBuilder(metaclass=ABCMeta):
+    _pizza = None
+
+    def __init__(self):
+        super().__init__()
+
+    def getPizza(self):
+        return self._pizza
+
+    def createNewPizzaProduct(self):
+        self._pizza = Pizza()
+
+    @abstractmethod
+    def buildImpasto():
+        pass
+
+    @abstractmethod
+    def buildSalsa():
+        pass
+
+    @abstractmethod
+    def buildCondimento():
+        pass
+```
+
+In questa classe non c'è nulla di particolare da spiegare, quindi passiamo al codice del ConcreteBuilder:
+
+```python
+class Margherita(PizzaBuilder):
+    def __init__(self):
+        super().__init__()
+
+    def buildImpasto(self):
+        self._pizza.setImpasto("Normale");
+
+    def buildSalsa(self):
+        self._pizza.setSalsa("Pomodoro");
+
+    def buildCondimento(self):
+        self._pizza.setCondimento("Mozzarella")
+```
+
+Qui possiamo notare come la classe Margherita che ha esteso la metaclasse ABCMeta ha implementato tutti i metodi che sono stati definiti @abstractmethod.
+
+Ora passiamo al codice del Director ovvero il Cuoco, cioè la classe che si occupa di costruire il nostro oggetto
+
+```python
+class Cuoco(object):
+    __pizzaBuilder = None
+
+    def __init__(self):
+        super().__init__()
+
+    def setPizzaBuilder(self, obj):
+        self.__pizzaBuilder = obj
+
+    def getPizza(self):
+        return self.__pizzaBuilder.getPizza()
+
+    def constructPizza(self):
+        self.__pizzaBuilder.createNewPizzaProduct()
+        self.__pizzaBuilder.buildImpasto()
+        self.__pizzaBuilder.buildSalsa()
+        self.__pizzaBuilder.buildCondimento()
+```
+
+Ed ora passiamo al main:
+
+```python
+cuoco = Cuoco()
+
+cuoco.setPizzaBuilder(Margherita())
+cuoco.constructPizza()
+
+pizza = cuoco.getPizza()
+```
+
+Analizziamo i vantaggi di questo pattern:
+
++   consente di cambiare la rappresentazione interna del prodotto: il Builder non conosce la rappresentazione interna del prodotto che può essere cambiata semplicemente costruendo un nuovo Builder.
++   isolamento tra Builder: ogni Builder è indipendente dall’altro pertanto è possibile aumentare la modularità.
++   controllo accurato del processo di creazione: la creazione avviene step-by-step e questo consente di stabilire passo dopo passo cosa effettuare.
+
+Possiamo concludere dicendo che questo pattern consente di utilizzare un Client che non debba essere a conoscenza dei passi necessari al fine della creazione di un oggetto ma tali passaggi vengono delegati ad un Director che sa come fare.
 
 ## Design Patterns Strutturali
 
@@ -224,7 +349,7 @@ Passiamo ora ad un esempio con relativa spiegazione step-by-step. Per il codice 
 
 [1] - [2] - [4] - [5] - [6] Abstract Factory
 
-[1] - [2] - [7] - [8] - [9] - [10] Builder Pattern
+[1] - [2] - [7] - [8] - [9] - [10] - [11]  Builder Pattern
 
 [Marco Ferraioli]:https://marcoferraioli.com/
 [1]:http://www.amazon.com/Python-Practice-Concurrency-Libraries-Developers/dp/0321905636
@@ -239,4 +364,5 @@ Passiamo ora ad un esempio con relativa spiegazione step-by-step. Per il codice 
 [8]:https://dellabate.wordpress.com/2011/01/10/gof-patterns-builder/
 [9]:http://www.cosenonjaviste.it/dai-costruttori-al-builder-pattern-in-java/
 [10]:http://www.helldragon.eu/marcello/galli_python/14-Classi.html
+[11]:https://it.wikipedia.org/wiki/Metaclasse
 [builder pizza]:https://github.com/paranoiasystem/Patterns/blob/master/codice/builder/pizza/Pizza.py
