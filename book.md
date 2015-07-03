@@ -411,7 +411,7 @@ class Singleton(object):
         return self._instance
 
 class MyClass(Singleton):
-  pass
+    pass
 ```
 
 Ora vediamo il secondo metodo, per il codice completo [singleton metaclass]:
@@ -465,9 +465,9 @@ class MyClass(metaclass=Singleton):
 [builder pizza]:https://github.com/paranoiasystem/Patterns/blob/master/codice/builder/pizza/Pizza.py
 [12]:https://it.wikipedia.org/wiki/Prototype_pattern
 [13]:https://dellabate.wordpress.com/2011/01/18/gof-patterns-prototype/
-[prototype cookie]:
+[prototype cookie]:https://github.com/paranoiasystem/Patterns/blob/master/codice/prototype/cookie/cookie.py
 [14]:https://it.wikipedia.org/wiki/Singleton
 [15]:https://dellabate.wordpress.com/2010/09/20/il-pattern-singleton/
 [16]:http://stackoverflow.com/questions/6760685/creating-a-singleton-in-python
-[singleton class]:
-[singleton metaclass]:
+[singleton class]:https://github.com/paranoiasystem/Patterns/blob/master/codice/singleton/singleton/class.py
+[singleton metaclass]:https://github.com/paranoiasystem/Patterns/blob/master/codice/singleton/singleton/metaclass.py
