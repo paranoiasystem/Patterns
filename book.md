@@ -11,27 +11,30 @@ Questo libro è decicato alla comunità OpenSource
 Bibliografia
 -------------
 
-Python in Practice by Mark Summerfield[1]
+Python in Practice by Mark Summerfield [1]
 
 Indice
 -------------
 
 [Introduzione]
-[Design Patterns Creazionali]:
--a
--s
--d
--f
-[Design Patterns Stutturali]:
--a
--s
--d
--f
-[Design Patterns Comportamentali]:
--a
--s
--d
--f
+
+[Design Patterns Creazionali] :
+  -a
+  -s
+  -d
+  -f
+
+[Design Patterns Stutturali] :
+  -a
+  -s
+  -d
+  -f
+
+[Design Patterns Comportamentali] :
+  -a
+  -s
+  -d
+  -f
 
 
 [Marco Ferraioli]:https://marcoferraioli.com/
