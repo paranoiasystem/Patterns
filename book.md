@@ -45,7 +45,7 @@ Tutti i pattern all'interno di questo libro saranno implementati in Python.
 
 In merito a Python vorrei aprire una piccola parentesi. La scelta dell'usare Python come linguaggio si deve al fatto che il libro di testo usato per il corso di TPA è stato: "Python in Practice, di Mark Summerfield". Inoltre il libro è da considerarsi rivolto maggiormente verso i neofiti di Python, per questo di tanto in tanto mi soffermerò ad analizzare delle funzionalità o la sintassi specifica di questo linguaggio.
 
-Ogni volta che parlerò di questi aspetti di Python essi verranno delimitati da 🐍, quindi a chi non interessano questi miei interventi potrà individuare subito il blocco da saltare.
+Ogni volta che parlerò di questi aspetti di Python essi verranno delimitati da :snake: , quindi a chi non interessano questi miei interventi potrà individuare subito il blocco da saltare.
 
 Vi ricordo che la sintassi e versione di Python usata in tutto il libro è la 3.0, questa versione di Python viene anche chiamata "Python 3000" o "Py3k".
 
@@ -98,9 +98,10 @@ Nel libro gli autori riprendono il concetto di design pattern dell'architetto Ch
 
 Anche se il concetto di patterns come soluzione ricorrente a un problema è anteriore all'uscita del libro, infatti nel 1987 W. Cunningham e K. Beck lavoravano al linguaggio Smalltalk e individuano alcuni patterns.
 
-Ma fù il libro che con il suo un'enorme successo a da dare inizio ad un'intera corrente filosofica della programmazione: il movimento pattern.
+Ma fù il libro che con il suo enorme successo a da dare inizio ad un'intera corrente filosofica della programmazione: il movimento pattern.
 
 ![Gang of four](http://podcast.federica.unina.it/mini/img.php?src=/files/_docenti/russo-stefano/img/stefano-russo-35111-012-9.jpg)
+
 -> Gang of Four <-
 
 ## Design Patterns Creazionali
