@@ -12,7 +12,7 @@ Questo pattern ha la seguente struttura:
 
 ![Factory method](https://upload.wikimedia.org/wikipedia/commons/a/a3/FactoryMethod.svg)
 
-Vediamone ora il codice che per comodità ed anche perchè semplice verrà riportato tutto di seguito:
+Vediamone ora il codice che per comodità ed anche perchè semplice verrà riportato tutto di seguito, qui potete trovare il codice [factory method scarpe]:
 
 ```python
 class Scarpe(object):
@@ -62,3 +62,6 @@ Questo pattern può essere utilizzato quando:
 -	La creazione di un oggetto preclude il suo riuso senza una significativa duplicazione di codice.
 -	La creazione di un oggetto richiede l'accesso ad informazioni o risorse che non dovrebbero essere contenute nella classe di composizione.
 -	La gestione del ciclo di vita degli oggetti gestiti deve essere centralizzata in modo da assicurare un comportamento coerente all'interno dell'applicazione.
+
+
+[factory method scarpe]:https://github.com/paranoiasystem/Patterns/blob/master/codice/factorymethod/scarpe/scarpe.py
