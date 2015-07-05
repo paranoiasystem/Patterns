@@ -1,4 +1,13 @@
-# Patterns
+Patterns
+===================
+
+Scritto da: [Marco Ferraioli].
+
+Questo libro è decicato alla comunità OpenSource.
+
+Versione : 0.0.1
+
+# Introduzione
 
 Salve, sono Marco Ferraioli. 
 
@@ -12,7 +21,7 @@ Tutti i pattern all'interno di questo libro saranno implementati in Python.
 
 In merito a Python vorrei aprire una piccola parentesi. La scelta dell'usare Python come linguaggio si deve al fatto che il libro di testo usato per il corso di TPA è stato: "Python in Practice, di Mark Summerfield". Inoltre il libro è da considerarsi rivolto maggiormente verso i neofiti di Python, per questo di tanto in tanto mi soffermerò ad analizzare delle funzionalità o la sintassi specifica di questo linguaggio.
 
-Ogni volta che parlerò di questi aspetti di Python essi verranno delimitati da :snake: , quindi a chi non interessano questi miei interventi potrà individuare subito il blocco da saltare.
+Ogni volta che parlerò di questi aspetti di Python essi verranno delimitati da " 🐍 🐍 🐍 Python 🐍 🐍 🐍 ",  quindi a chi non interessano questi miei interventi potrà individuare subito il blocco da saltare.
 
 Vi ricordo che la sintassi e versione di Python usata in tutto il libro è la 3.0, questa versione di Python viene anche chiamata "Python 3000" o "Py3k".
 
@@ -22,8 +31,5 @@ Ho deciso di rilasciare il libro ed il codice sotto licenza GNU, quindi sentitev
 
 Vi ricordo che all'interno degli articoli non verrà riportato tutto il codice ma solo i pezzi più importanti che servono a rendere possibile la comprensione del pattern, comunque linkerò prima di ogni esempio il file contenente tutto il codice a cui la spiegazione fa riferimento.
 
-Vai al [libro].
 
-
-[libro]:https://github.com/paranoiasystem/Patterns/blob/master/book.md
 [Marco Ferraioli]:https://marcoferraioli.com/
