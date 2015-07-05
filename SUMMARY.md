@@ -10,4 +10,5 @@
    * [Builder Pattern](builder_pattern.md)
    * [Prototype Pattern](prototype_pattern.md)
    * [Singleton Pattern](singleton_pattern.md)
+   * Factory Method Pattern
 
