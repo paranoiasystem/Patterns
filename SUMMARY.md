@@ -12,4 +12,5 @@
    * [Prototype Pattern](prototype_pattern.md)
    * [Singleton Pattern](singleton_pattern.md)
 * [Design patterns strutturali](design_patterns_strutturali.md)
+   * Adapter pattern
 
