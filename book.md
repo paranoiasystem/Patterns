@@ -102,10 +102,7 @@ Ma fù il libro che con il suo enorme successo a da dare inizio ad un'intera cor
 
 ![Gang of four](http://podcast.federica.unina.it/mini/img.php?src=/files/_docenti/russo-stefano/img/stefano-russo-35111-012-9.jpg)
 
-<div style="text-align:center" markdown="1">
--> Gang of four <-
-</div>
-
+<div style="text-align:center" markdown="1">Gang of Four</div>
 
 ## Design Patterns Creazionali
 
