@@ -11,5 +11,5 @@
    * [Factory Method Pattern](factory_method_pattern.md)
    * [Prototype Pattern](prototype_pattern.md)
    * [Singleton Pattern](singleton_pattern.md)
-* Design patterns strutturali
+* [Design patterns strutturali](design_patterns_strutturali.md)
 
