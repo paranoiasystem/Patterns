@@ -24,7 +24,7 @@ Esistono due tipi di Adapter
 	-	basato su ereditarietà;
 	-	possibilità di implementazione solo con linguaggi che supportano l'eredità multipla (es.: C++, Python...).
 
-Vediamo il codice dell'Object Adapter, qui potete trovare il codice [object adapter]:
+Per semplicità vedremo solo il codice dell'Object Adapter, qui potete trovare il codice [object adapter]:
 
 ```python
 class Impiegato(object):
