@@ -25,6 +25,5 @@ Vi ricordo che all'interno degli articoli non verrà riportato tutto il codice m
 Vai al [libro].
 
 
-
 [libro]:https://github.com/paranoiasystem/Patterns/blob/master/book.md
 [Marco Ferraioli]:https://marcoferraioli.com/
