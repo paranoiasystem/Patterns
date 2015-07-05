@@ -26,9 +26,9 @@ class Employer(object):
 
 class AdattatoreEmployer(Employer):
 	employer = None
-	def __init__(self, employer):
+	def __init__(self):
 		super().__init__()
-		self.employer = employer
+		self.employer = Employer()
 
 	def getCognome(self):
 		return self.employer.getLastName()
@@ -41,7 +41,7 @@ def main():
 	impiegato.setCognome("Rossi")
 	print(impiegato.getCognome())
 
-	adattatoreemployer = AdattatoreEmployer(Employer())
+	adattatoreemployer = AdattatoreEmployer()
 	adattatoreemployer.setCognome("Simpson")
 	print(adattatoreemployer.getCognome())
 
