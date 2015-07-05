@@ -101,8 +101,7 @@ Anche se il concetto di patterns come soluzione ricorrente a un problema è ante
 Ma fù il libro che con il suo enorme successo a da dare inizio ad un'intera corrente filosofica della programmazione: il movimento pattern.
 
 ![Gang of four](http://podcast.federica.unina.it/mini/img.php?src=/files/_docenti/russo-stefano/img/stefano-russo-35111-012-9.jpg)
-
-<div style="text-align:center" markdown="1">Gang of Four</div>
+*Gang of Four*
 
 ## Design Patterns Creazionali
 
