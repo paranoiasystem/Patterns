@@ -60,7 +60,7 @@ Se proviamo ad instanziare una metaclasse che contiene dei metodi astratti a run
 
 >   TypeError: Can't instantiate abstract class XXX with abstract methods 
 
-Nell'[Abstract Factory](#abstract-factory) ho già spiegato il perchè non esistono le interfacce in Python.
+Nell'[Abstract Factory] ho già spiegato il perchè non esistono le interfacce in Python.
 
 (all'interno della cartella dove risiede il codice del [builder pizza] potete trovare un file Test.py che illustra questo comportamento)
 
@@ -165,3 +165,4 @@ Analizziamo i vantaggi di questo pattern:
 Possiamo concludere dicendo che questo pattern consente di utilizzare un Client che non debba essere a conoscenza dei passi necessari al fine della creazione di un oggetto ma tali passaggi vengono delegati ad un Director che sa come fare.
 
 [builder pizza]:https://github.com/paranoiasystem/Patterns/blob/master/codice/builder/pizza/Pizza.py
+[Abstract Factory]:abstract_factory.md
