@@ -25,12 +25,6 @@ Esistono due tipi di Adapter
 	-	l’adattatore eredita sia dall’interfaccia attesa sia dalla classe adattata;
 	-	non si ha eredità multipla: l’interfaccia attesa deve essere un’interfaccia, non una classe.
 
-🐍 🐍 🐍 Python 🐍 🐍 🐍
-
-In Python grazie all'uso delle metaclassi potenzialmente possiamo implementarli entrambi, all'interno del libro vedremo solo l'Object Adapter, ma sarà reso disponibile il codice di entrambi.
-
-🐍 🐍 🐍 Python 🐍 🐍 🐍
-
 Vediamo il codice dell'Object Adapter, qui potete trovare il codice [object adapter]:
 
 ```python
