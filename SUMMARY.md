@@ -9,4 +9,3 @@
    * [Abstract Factory](abstract_factory.md)
    * [Builder Pattern](builder_pattern.md)
    * [Prototype Pattern](prototype_pattern.md)
-
