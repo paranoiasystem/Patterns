@@ -17,7 +17,7 @@ Indice
 -	1.2 [Vantaggi dei patterns](#vantaggi-dei-patterns)
 -	1.3 [Storia dei patterns](#storia-dei-patterns)
 
-2 [Design Patterns Creazionali](#design-patterns-creazionali):
+2 [Design patterns creazionali](#design-patterns-creazionali):
 
 -	2.1 [Abstract Factory](#abstract-factory)
 -	2.2 [Builder Pattern](#builder-pattern)
@@ -101,14 +101,14 @@ Anche se il concetto di patterns come soluzione ricorrente a un problema è ante
 Ma fù il libro che con il suo enorme successo a da dare inizio ad un'intera corrente filosofica della programmazione: il movimento pattern.
 
 ![Gang of four](http://podcast.federica.unina.it/mini/img.php?src=/files/_docenti/russo-stefano/img/stefano-russo-35111-012-9.jpg)
-*Gang of Four*
 
-## Design Patterns Creazionali
+## Design patterns creazionali
 
-I design patterns creazionali astraggono il processo di istanziazione, essi consentono di rendere il sistema indipendente da come gli oggetti sono creati, rappresentati e dalle relazioni di composizione tra essi.
+I design patterns creazionali astraggono il processo di istanziazione, consentono di rendere il sistema indipendente da come gli oggetti sono creati, rappresentati e delle relazioni di composizione tra essi.
 
-In parole povere: I pattern creazionali nascondono i costruttori delle classi e mettono dei metodi al loro posto creando un'interfaccia. In questo modo si possono utilizzare oggetti senza sapere come sono implementati.
+Se basati su classi, utilizzano l’ereditarietà per modificare la classe istanziata. Invece se basati su oggetti, delegano l’istanziazione ad altri oggetti.
 
+I design patterns creazionali  incapsulano la conoscenza relativa alle classi concrete utilizzate dal sistema e nascondono come le istanze delle classi sono create e assemblate
 
 ## Abstract Factory
 
@@ -118,12 +118,11 @@ L'Abstract factory è uno dei fondamentali design pattern creazionali della prog
 
 Questo pattern è utile quando vogliamo creare oggetti complessi che sono composti da altri oggetti e dove gli oggetti composti sono tutti di una particolare famiglia.
 
-Per esempio, in un sistema di GUI dove potremmo avere un Abstract Factory che ha tre sottoclassi (Linux,Windows,OSX) che hanno gli stessi metodi per creare un bottone o una label ma lo fanno in modi diversi.
+Per esempio, in un sistema di GUI dove potremmo avere un Abstract Factory che ha tre sottoclassi (Linux,Windows,OSX), le tre sotto classi hanno gli stessi metodi per creare un bottone o una label ma lo fanno in modi diversi.
 
 Ora vedremo subito un esempio di questo pattern.
 
 Questo pattern ha la seguente struttura:
-
 
 +	AbstractFactory(Person): interfaccia che espone le operazioni realizzate dai oggetti concreti
 +	ConcreteFactory(Italian/English): implementazione delle operazioni indicate nell'AbstractFactory
@@ -133,14 +132,17 @@ Questo pattern ha la seguente struttura:
 
 ![Abstact UML](https://upload.wikimedia.org/wikipedia/commons/9/9d/Abstract_factory_UML.svg)
 
+:snake: :snake: :snake: Python :snake: :snake: :snake:
 
-Vorrei fare una piccola nota: In Python non esistono le interfacce, quindi per implementare il codice useremo delle normali classi, questo non è da ritenersi un errore.
+In Python non esistono le interfacce, quindi per implementare il codice useremo delle normali classi, questo non è da ritenersi un errore.
 
 Python è un linguaggio dinamico, che usa fortemente il [Duck Typing].
 
 Il concetto di interfaccia in python è basato sui metodi e non sull'ereditarietà. Ad esempio qualsiasi classe che abbia dei metodi come open(), read(), write(), eccetera è assimilabile ad un file,  quindi può essere usata come sostituto di un file. Un po' come quando guidi, non ti interessa sapere come funziona il motore o il tipo di automobile. Ma sai che se schiacci un pedale acceleri, un altro freni, con il volante si sterza ed eccetera, quindi che tu stia guidando un tir, un motocarro o una ferrari l'interfaccia è la stessa!
 
-Nel codice per distinguere le classi dalle interfacce scriveremo Interface prima del proprio nome
+:snake: :snake: :snake: Python :snake: :snake: :snake:
+
+Nel codice per distinguere le classi dalle interfacce scriveremo Interface prima del proprio nome della classe che dovrebbe essere un'interfaccia.
 
 Per visualizzare il codice completo andate qui: [abstract person]
 
@@ -157,7 +159,7 @@ class InterfacePerson(object):
 
 Una volta definita l'interfaccia Person passiamo a definire le classi che conterrano l'implementazione dei metodi definiti nell'interfaccia, ovvero il ConcreteFactory(Italian).
 
-(Di seguito per comodità vedremo solo la classe Italian e tutto ciò che è correleato ad essa, per il resto del codice andare qui: [abstract person] ) 
+(Di seguito per comodità vedremo solo la classe Italian e tutto ciò che è correleato ad essa, per il resto del codice sopra trovate il link) 
 
 ```python
 class Italian(InterfacePerson):
@@ -211,18 +213,24 @@ saluto.Saluta()
 
 In output riceveremo: Ciao, Come va?
 
-É importante notare che in questo caso sono il pattern Abstract Factory è stato usato due volte. La prima volta per definire l'esistenza di vari tipi di persona e la seconda per definire l'esistenza di vari tipi di modi si salutare.
+É importante notare che in questo caso il pattern Abstract Factory è stato usato due volte. La prima volta per definire l'esistenza di persone di diversa nazionalità e la seconda per definire l'esistenza di vari linguaggi.
 
 Ora analizziamo i suoi vantaggi:
 
-+   isolamento delle classi concrete: il client non ha modo di instanziare direttamente le classi concrete, ma può creare le instanze delle classi semplicemente tramite le interfacce.
-+   semplificazione della modifica delle relazioni: le relazioni tra le classi concrete possono essere facilmente modificate senza pregiudicare il client che, poichè non ha visibilità della struttura implementativa, non avrà nessuna ricaduta sulle modifiche effettuate.
++	Isola le classi concrete: tutte le manipolazioni client-side sono fatte tramite interfacce astratte.
++	Semplifica lo scambio di famiglie di prodotti: basta cambiare la ConcreteFactory.
++	Favorisce la consistenza tra i prodotti: semplifica la cooperazione tra oggetti della stessa famiglia.
 
 Ecco gli svantaggi:
 
-+   difficoltà nell’aggiungere nuovi prodotti(metodi): la creazione di nuovi prodotti comporta delle modifiche in AbstractFactory e tutte le classi figlie e questa modifica non è indolore.
+-	Supportare nuovi tipi di prodotto è difficile, occorre riscrivere la AbstractFactory e tutte le sottoclassi.
 
-Possiamo concludere dicendo brevemente che l'Abstract Factory ci permette di  utilizzare gli stessi metodi per accedere ad oggetti di tipo differente, quindi avremo una risposta diversa che dipende dalla loro implementazione dei metodi della classe.
+
+Possiamo concludere dicendo che l'uso dell'Abstract Factory è utile quando:
+
++	un sistema deve essere indipendente da come i suoi prodotti sono creati, composti e rappresentati;
++	un sistema deve essere configurato con uno di tante famiglie di prodotti;
++	si vuole fornire una libreria di classi di prodotti e si vuole rivelare solo la loro interfaccia, non la loro implementazione.
 
 ## Builder Pattern
 
@@ -478,9 +486,11 @@ class MyClass(metaclass=Singleton):
 
 ## Bibliografia - Referenze
 
-[2] Cosa Sono I Patterns
+[2] - [18] Cosa sono i patterns
 
-[2] Tipi di design patterns
+[2] - [18] Tipi di design patterns
+
+[2] - [18] Storia dei patterns
 
 [2] - [3] Design Patterns Creazionali
 
@@ -515,3 +525,4 @@ class MyClass(metaclass=Singleton):
 [16]:http://stackoverflow.com/questions/6760685/creating-a-singleton-in-python
 [singleton class]:https://github.com/paranoiasystem/Patterns/blob/master/codice/singleton/singleton/class.py
 [singleton metaclass]:https://github.com/paranoiasystem/Patterns/blob/master/codice/singleton/singleton/metaclass.py
+[18]:http://www.federica.unina.it/ingegneria/programmazione-2/design-patterns/
