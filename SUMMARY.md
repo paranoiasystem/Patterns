@@ -8,7 +8,7 @@
 * [Design patterns creazionali](design_patterns_creazionali.md)
    * [Abstract Factory](abstract_factory.md)
    * [Builder Pattern](builder_pattern.md)
+   * Factory Method Pattern
    * [Prototype Pattern](prototype_pattern.md)
    * [Singleton Pattern](singleton_pattern.md)
-   * Factory Method Pattern
 
