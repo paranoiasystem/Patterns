@@ -22,8 +22,7 @@ Esistono due tipi di Adapter
 
 -	Class Adapter
 	-	basato su ereditarietà;
-	-	l’adattatore eredita sia dall’interfaccia attesa sia dalla classe adattata;
-	-	non si ha eredità multipla: l’interfaccia attesa deve essere un’interfaccia, non una classe.
+	-	possibilità di implementazione solo con linguaggi che supportano l'eredità multipla (es.: C++, Python...).
 
 Vediamo il codice dell'Object Adapter, qui potete trovare il codice [object adapter]:
 
