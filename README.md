@@ -7,6 +7,8 @@ Questo libro è decicato alla comunità OpenSource.
 
 Versione : 0.0.1
 
+NOTA: Il libro al momento è in fase di scrittura quindi non è da ritenersi completo, in quanto molto presto verrano aggiunti alcuni capitoli ed ovviamente verranno effettuate delle correzioni.
+
 # Introduzione
 
 Salve, sono Marco Ferraioli. 
