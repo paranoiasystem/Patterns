@@ -15,7 +15,7 @@ Questo pattern è composto dai seguenti partecipanti:
 
 ![Bridge UML](https://upload.wikimedia.org/wikipedia/commons/c/cf/Bridge_UML_class_diagram.svg)
 
-Ora vediamone il codice, potete trovarlo qui :
+Ora vediamone il codice, potete trovarlo qui [Python bridge]:
 
 ```python
 class SistemaOperativoAPI(object):
@@ -75,3 +75,4 @@ Il codice risulta essere molto semplioce e credo non richieda spiegazioni. Quind
 -	migliora l’estendibilità: è possibile estendere la gerarchia di Abstraction e Implementor senza problemi
 -	nasconde l’implementazione al client: il Client non si deve porre il problema di conoscere l’implementazione delle classi concrete.
 
+[Python bridge]:https://github.com/paranoiasystem/Patterns/blob/master/codice/bridge/bridge.py
