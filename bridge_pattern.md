@@ -15,5 +15,63 @@ Questo pattern è composto dai seguenti partecipanti:
 
 ![Bridge UML](https://upload.wikimedia.org/wikipedia/commons/c/cf/Bridge_UML_class_diagram.svg)
 
-Ora vediamone il codice:
+Ora vediamone il codice, potete trovarlo qui :
+
+```python
+class SistemaOperativoAPI(object):
+	def __init__(self):
+		super().__init__()
+
+	def stampaTesto(self, testo):
+		pass
+
+class Windows(SistemaOperativoAPI):
+	def __init__(self):
+		super().__init__()
+
+	def stampaTesto(self, testo):
+		print("-" + testo + "-")
+		
+class Linux(SistemaOperativoAPI):
+	def __init__(self):
+		super().__init__()
+
+	def stampaTesto(self, testo):
+		print("->" + testo + "<-")
+
+class SistemaOperativo(object):
+	api = None
+
+	def __init__(self, api):
+		super().__init__()
+		self.api = api
+
+	def stampa(self):
+		pass
+
+class Testo(SistemaOperativo):
+	testo = None
+
+	def __init__(self, api, testo):
+		super().__init__(api)
+		self.testo = testo
+		
+	def stampa(self):
+		self.api.stampaTesto(self.testo)
+
+def main():
+	linux = Testo(Linux(), "Ciao")
+	linux.stampa()
+
+	windows = Testo(Windows(), "Ciao")
+	windows.stampa()
+
+if __name__ == '__main__':
+		main()	
+```
+Il codice risulta essere molto semplioce e credo non richieda spiegazioni. Quindi ora passerò ad illustrare i suoi vantaggi:
+
+-	disaccoppia l’interfaccia dall’implementazione: disaccoppiando Abstraction e Implementor è possibile gestire i cambiamenti delle classi concrete senza cablare nel codice dei riferiementi diretti.
+-	migliora l’estendibilità: è possibile estendere la gerarchia di Abstraction e Implementor senza problemi
+-	nasconde l’implementazione al client: il Client non si deve porre il problema di conoscere l’implementazione delle classi concrete.
 
