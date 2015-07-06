@@ -13,5 +13,5 @@
    * [Singleton Pattern](singleton_pattern.md)
 * [Design patterns strutturali](design_patterns_strutturali.md)
    * [Adapter pattern](adapter_pattern.md)
-   * Bridge Pattern
+   * [Bridge Pattern](bridge_pattern.md)
 
